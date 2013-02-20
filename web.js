@@ -9,8 +9,7 @@ app.get('/', function(request, response) {
 var mongo = require('mongodb');
 
 var mongoUri = process.env.MONGOLAB_URI || 
-  process.env.MONGOHQ_URL || 
-  'mongodb://dbuser:user4now@ds031877.mongolab.com:31877/robbhedrick-test'; 
+  process.env.MONGOHQ_URL ||  
 
 mongo.Db.connect(mongoUri, function (err, db) {
   db.collection('users', function(er, collection) {
